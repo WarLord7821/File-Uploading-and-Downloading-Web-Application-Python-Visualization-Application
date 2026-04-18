@@ -6,6 +6,24 @@
 This repository contains the completed deliverables for the Aeron Systems technical assignment, split into two distinct utilities: a full-stack Web Utility (Part 1) and a Python-based Data CLI Utility (Part 2).
 
 ---
+
+## ⚙️ System Requirements & Prerequisites
+
+The applications are designed to be cross-platform compatible (Windows x86 / Debian ARM). To run the utilities, the following must be installed on the host machine:
+
+**Global Requirements:**
+* **Git:** For cloning the repository.
+* **Operating System:** Windows, Linux (Debian/Ubuntu), or macOS.
+
+**For Part 1 (Web Utility):**
+* **Primary (Recommended):** Docker Desktop (Windows/Mac) or Docker Engine + Docker Compose (Linux).
+* **Fallback (Native Build):** Node.js (v20.19+ or 22.12+) and `npm`.
+
+**For Part 2 (Data Utility):**
+* **Python:** Python 3.8 or higher.
+* **Package Manager:** `pip` (to install `pandas` and `matplotlib`).
+
+---
 ## 📥 Getting Started
 
 To evaluate this assignment, first clone the repository to your local machine:
