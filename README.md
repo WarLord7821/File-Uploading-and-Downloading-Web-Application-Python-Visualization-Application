@@ -92,3 +92,28 @@ A robust, terminal-based Python script that ingests CSV data and generates custo
 2. Install the required data science libraries: `pip install -r requirements.txt`
 3. Run the script: `python plotter.py`
 4. Follow the terminal prompts to ingest data and generate your graphs.
+
+---
+## 🤖 AI Collaboration & Prompt Engineering
+
+This project was developed with the assistance of **Gemini Advanced (Pro Model)** acting as a pair-programming architect. 
+
+### **Manual Engineering & Overrides**
+While the AI generated the boilerplate code, several critical manual interventions and architectural decisions were made to ensure production readiness:
+1. **Docker Node Versioning:** Manually upgraded the frontend Dockerfile base image from `node:18-alpine` to `node:20-alpine` to resolve Vite compatibility restrictions.
+2. **Ghost Container Debugging:** Manually purged corrupted Docker Compose metadata (`ContainerConfig` errors) caused by legacy Ubuntu Docker installations on the AWS EC2 test server.
+3. **Network & CORS Configuration:** Manually configured AWS EC2 Security Groups (opening ports 5173 and 3000) and updated the React `.env` and Express `cors()` policies to allow public IPv4 fetching instead of defaulting to `localhost`.
+
+---
+### **Core Prompts Used**
+*(Note: The complete, unedited conversation transcript is attached to my submission email as `AI_Prompt_Log_RishabhZambre.pdf`).*
+
+**Prompt 1: Full-Stack Architecture (Part 1)**
+> "Act as a Senior Full-Stack Developer. I need a Node.js/Express backend and a React (Vite) frontend with Tailwind CSS. The app must accept file uploads (.log, .pdf, .csv, .zip) via multer, save metadata (Date, Description, Uploader Name) to a local `metadata.json`, and display the uploaded files in a modern dashboard table with a download button."
+
+**Prompt 2: Advanced UI/UX & Validation (Part 1)**
+> "Upgrade my React/Node Portal. Add a 5MB size limit to the backend returning a clean 400 error. On the frontend, replace the file input with a Drag-and-Drop zone, use `react-hot-toast` for error/success popups, and create a Document Preview Modal so users can view `.pdf`, `.csv`, and `.log` files directly in the browser via a new `GET /preview/:filename` endpoint."
+
+**Prompt 3: Python Data Utility (Part 2)**
+> "Act as an expert Python developer. Write a CLI script using pandas and matplotlib. It must ask the user to either (1) select a local CSV via tkinter or (2) paste a URL to a web-hosted CSV. Once loaded, automatically scan for NaN values and prompt the user to drop or fill them. Finally, let the user map columns to X and Y axes and generate a Line or Bar chart."
+5. **Git Authentication:** Bypassed GitHub's deprecated password authentication by generating and injecting a Personal Access Token (PAT) for remote server cloning.
