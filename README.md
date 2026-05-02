@@ -1,9 +1,7 @@
-# Aeron Systems - AI Engineer Intern Assignment
-
 **Author:** Rishabh Zambre  
 **Date:** April 2026  
 
-This repository contains the completed deliverables for the Aeron Systems technical assignment, split into two distinct utilities: a full-stack Web Utility (Part 1) and a Python-based Data CLI Utility (Part 2).
+This repository contains the completed deliverables, split into two distinct utilities: a full-stack Web Utility (Part 1) and a Python-based Data CLI Utility (Part 2).
 
 ---
 
