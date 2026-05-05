@@ -1,3 +1,6 @@
+Copyright (c) 2026 Rishabh Zambre. All rights reserved. This repository and its contents are provided solely for evaluation purposes as part of a technical interview process. Commercial use, reproduction, or distribution of this code without explicit permission is strictly prohibited.
+
+
 **Author:** Rishabh Zambre  
 **Date:** April 2026  
 
